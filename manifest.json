@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Video Filter",
+    "version": "1.0",
+    "description": "Filter YouTube videos based on user-defined keywords.",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "icon16.jpg"
+    }
+}
